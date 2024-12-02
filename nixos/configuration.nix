@@ -5,7 +5,7 @@
   # Import hardware configuration
   imports = [
     ./hardware-configuration.nix
-    ./home-manager.nix
+    # ./home-manager.nix
   ];
 
   # Basic settings
@@ -19,18 +19,14 @@
   };
 
   # Boot loader configuration
-  boot.loader.grub.device = "nodev";
+  boot.loader.grub.device = "/dev/sda"; 
   boot.loader.grub.efiSupport = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.grub.gfxmodeEfi = "1024x768";
 
   # LUKS configuration
-  boot.initrd.luks.devices = {
-    lv_root = {
-      device = "/dev/disk/by-label/encrypted";
-      preLVM = true;
-      allowDiscards = true;
-    };
+  boot.initrd.lvm = {
+    devices = [ "volgroup0" ];
   };
 
   # Console settings

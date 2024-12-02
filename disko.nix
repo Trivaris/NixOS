@@ -25,26 +25,15 @@
 
             };
             /**********/
-            encrypted = {
+            lvm_partition = {
               size = "100%";
-              label = "encrypted";
+              label = "lvm_partition";
 
               content = {
-                name = "crypted";
-                type = "luks";
-
-                settings = {
-                  keyFile = "/tmp/secret.key";
-                  allowDiscards = true;
-                };
-
-                content = {
-                  type = "lvm_pv";
-                  vg = "volgroup0";
-                };
-
+                type = "lvm_pv";
+                vg = "volgroup0";
               };
-            };#
+            };
             /**********/
 
           };
