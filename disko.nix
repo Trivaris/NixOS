@@ -14,6 +14,7 @@
             boot = {
               type = "EF00";
               size = "512M";
+              label = "boot";
 
               content = {
                 type = "filesystem";
