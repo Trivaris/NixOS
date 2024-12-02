@@ -27,7 +27,7 @@
   # LUKS configuration
   boot.initrd.luks.devices = {
     lv_root = {
-      device = "/dev/volgroup0/lv_root";
+      device = "/dev/disk/by-label/encrypted";
       preLVM = true;
       allowDiscards = true;
     };

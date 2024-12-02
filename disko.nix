@@ -26,6 +26,7 @@
             /**********/
             encrypted = {
               size = "100%";
+              label = "encrypted";
 
               content = {
                 name = "crypted";
