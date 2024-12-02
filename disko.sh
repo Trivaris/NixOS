@@ -21,3 +21,8 @@ sed -i "s|size = \"8G\";|size = \"$swap_size\";|g" "$nix_file"
 sed -i "s|size = \"30G\";|size = \"$root_size\";|g" "$nix_file"
 
 echo "disko.nix was updated!"
+
+read -p "Do you want to apply the changes? (y/n): " apply
+if [ "$apply" == "y" ]; then
+    sudo nix --experimental-features "nix-command flakes" run github:nix-community/disko/latest -- --mode destroy,format,mount /tmp/disk-config.nix
+fi
