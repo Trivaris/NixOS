@@ -3,7 +3,7 @@
     ./aseprite/aseprite.nix           # pixel art editor
     ./audacious.nix                   # music player
     ./bat.nix                         # better cat command
-    ./browser.nix                     # firefox based browser
+    ./browser/browser.nix             # firefox based browser
     ./btop.nix                        # resouces monitor 
     ./cava.nix                        # audio visualizer
     ./discord/discord.nix             # discord with gruvbox
@@ -20,10 +20,10 @@
     ./micro.nix                       # nano replacement
     ./nemo.nix                        # file manager
     ./nvim.nix                        # neovim editor
-    ./obsidian.nix
-    ./p10k/p10k.nix
+    #./obsidian.nix		      # Note-taking
+    ./p10k/p10k.nix		      # Zsh Customization
     ./packages.nix                    # other packages
-    ./retroarch.nix  
+    ./retroarch.nix  		      # Emulator
     ./rofi.nix                        # launcher
     ./scripts/scripts.nix             # personal scripts
     ./spicetify.nix                   # spotify client
