@@ -29,6 +29,8 @@
     git
   ];
 
+  home-manager.backupFileExtension = "backup";
+
   time.timeZone = "Europe/Berlin";
   i18n.defaultLocale = "de_DE.UTF-8";
   nixpkgs.config.allowUnfree = true;
